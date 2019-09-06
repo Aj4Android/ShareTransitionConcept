@@ -49,7 +49,6 @@ public class FirstActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             // inside your activity (if you did not enable transitions in your theme)
             getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-            Toast.makeText(this, "FirstActivity opening", Toast.LENGTH_SHORT).show();
 //            getWindow().setEnterTransition(new ChangeBounds());
 //            getWindow().setEnterTransition(new ChangeClipBounds());
 //            getWindow().setEnterTransition(new ChangeImageTransform());
@@ -60,10 +59,9 @@ public class FirstActivity extends AppCompatActivity {
             // Apply activity transition
         } else {
             // Swap without transition
-            Toast.makeText(this, "No Transition", Toast.LENGTH_SHORT).show();
         }
         setContentView(R.layout.activity_first);
-
+        Toast.makeText(this, "Third toast", Toast.LENGTH_SHORT).show();
         rv_list = findViewById(R.id.rv_list);
         content_manager = new LinearLayoutManager(FirstActivity.this);
         content_manager.setOrientation(LinearLayoutManager.VERTICAL);
