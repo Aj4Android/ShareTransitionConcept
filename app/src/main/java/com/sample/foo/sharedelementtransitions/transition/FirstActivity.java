@@ -27,6 +27,7 @@ import android.view.Window;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -48,6 +49,7 @@ public class FirstActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             // inside your activity (if you did not enable transitions in your theme)
             getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+            Toast.makeText(this, "FirstActivity opening", Toast.LENGTH_SHORT).show();
 //            getWindow().setEnterTransition(new ChangeBounds());
 //            getWindow().setEnterTransition(new ChangeClipBounds());
 //            getWindow().setEnterTransition(new ChangeImageTransform());
@@ -58,6 +60,7 @@ public class FirstActivity extends AppCompatActivity {
             // Apply activity transition
         } else {
             // Swap without transition
+            Toast.makeText(this, "No Transition", Toast.LENGTH_SHORT).show();
         }
         setContentView(R.layout.activity_first);
 
