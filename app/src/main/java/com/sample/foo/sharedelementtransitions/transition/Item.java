@@ -5,6 +5,7 @@ public class Item {
     String id;
     String name;
     String image;
+    String testvariable;
 
     public Item(String id,String name,String image){
         this.id = id;
@@ -34,5 +35,13 @@ public class Item {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getTestvariable() {
+        return testvariable;
+    }
+
+    public void setTestvariable(String testvariable) {
+        this.testvariable = testvariable;
     }
 }
